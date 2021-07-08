@@ -22,7 +22,7 @@ def load_class_names(path):
     with open(path) as f:
         return [line.rstrip("\n") for line in f.readlines()]
 
-def write_json(input_txt, output_json, class_file, separator_key='Enter Image Path:', img_format='.jpg'):
+def write_json(input_txt, output_json, class_file, separator_key='helmet2', img_format='.jpg'):
     class_names = load_class_names(class_file)
     cls2id = {cls:id for id, cls in enumerate(class_names)}
 
