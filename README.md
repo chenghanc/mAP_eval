@@ -22,6 +22,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 <details><summary><b>CLICK ME</b> - mAP with COCO API</summary>
 
 - mAP with pycocotools (baby) train
+  - mAP with Darknet 97.67 %
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.705
@@ -39,6 +40,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 ```
 
 - mAP with pycocotools (baby) validation
+  - mAP with Darknet 96.64 %
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.685
@@ -56,6 +58,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 ```
 
 - mAP with pycocotools (car) train
+  - mAP with Darknet 95.95 %
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.753
@@ -73,6 +76,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 ```
 
 - mAP with pycocotools (car) validation
+  - mAP with Darknet 99.81 %
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.625
