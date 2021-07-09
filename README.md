@@ -1,6 +1,6 @@
 # mAP_eval (Custom dataset)
 
-## How to use the scripts `demo-baby.py` and `demo-mAP.py`
+## How to use the scripts
 
 - Verifying mAP for the custom dataset with results generated from [AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
 
