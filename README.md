@@ -16,6 +16,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 
 - Modify `separator_key='...'` in `pred_yolo2json.py`
 - Run the code `demo-baby.py` and Yolo Darknet Detection/GT files will be converted to pycocotools json format
+  - It might be a good idea to rename the file names, e.g. `train1.jpg, train2.jpg, ... train5011.jpg`
 - Run the code `demo-mAP.py`  and mAP will be shown on screen
 
 <details><summary><b>CLICK ME</b> - mAP with COCO API</summary>
@@ -52,6 +53,23 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.626
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.765
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.827
+```
+
+- mAP with pycocotools (car) train
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.753
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.956
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.913
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.636
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.810
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.850
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.702
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.796
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.796
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.696
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.848
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.875
 ```
 
 - mAP with pycocotools (car) validation
