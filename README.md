@@ -20,7 +20,24 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 
 <details><summary><b>CLICK ME</b> - mAP with COCO API</summary>
 
-- mAP with pycocotools (baby)
+- mAP with pycocotools (baby) train
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.705
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.964
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.850
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.583
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.737
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.804
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.384
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.704
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.753
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.645
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.787
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.847
+```
+
+- mAP with pycocotools (baby) validation
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.685
@@ -37,7 +54,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.827
 ```
 
-- mAP with pycocotools (car)
+- mAP with pycocotools (car) validation
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.625
