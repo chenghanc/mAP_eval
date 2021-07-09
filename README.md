@@ -18,7 +18,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 - Run the code `demo-baby.py` and Yolo Darknet Detection/GT files will be converted to pycocotools json format
 - Run the code `demo-mAP.py`  and mAP will be shown on screen
 
-<details><summary><b>CLICK ME</b> - mAP with COCOAPI</summary>
+<details><summary><b>CLICK ME</b> - mAP with COCO API</summary>
 
 - mAP with pycocotools (baby)
 
