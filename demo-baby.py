@@ -10,17 +10,17 @@ import gt_yolo2json
 # ./darknet detector test baby.data baby.cfg baby_final.weights -thresh 0.001 -dont_show -ext_output < test.txt > result.txt
 # grep -vE "(Detection|Enter)" result.txt > result2.txt
 
-input_txt = '../../helmet2020-1-rl3/result2.txt'
+input_txt = 'data/result2.txt'
 
 output_json = 'darknet_pred_baby.json'
-class_file = '../../helmet2020-1-rl3/baby.names'
+class_file = 'data/baby.names'
 
 pred_yolo2json.write_json(input_txt, output_json, class_file)
 
 # gt
 
-valid_target_txt = "../../helmet2020-1-rl3/test.txt"
-name_path = '../../helmet2020-1-rl3/baby.names'
+valid_target_txt = "data/test.txt"
+name_path = 'data/baby.names'
 
 def load_class_names(path):
     with open(path) as f:
