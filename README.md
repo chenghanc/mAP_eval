@@ -1,3 +1,50 @@
+# mAP_eval (Custom dataset)
+
+## How to use the scripts `demo-baby.py` and `demo-mAP.py`
+
+- Verifying mAP for the custom dataset with results generated from [AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
+
+```
+$ ./darknet detector test baby.data baby.cfg baby.weights -thresh 0.001 -dont_show -ext_output < test.txt > result.txt
+```
+
+- Removing lines from the text file containing specific words
+
+```
+$ grep -vE "(Detection|Enter)" result.txt > result2.txt
+```
+
+- Run the code `demo-baby.py` and Yolo Darknet Detection/GT files will be converted to pycocotools json format
+- Run the code `demo-mAP.py`  and mAP will be shown on screen
+
+![alt text](https://github.com/chenghanc/mAP_eval/blob/master/mAP.png?raw=true)
+
+- We can modify `cocoapi/PythonAPI/pycocotools/cocoeval.py` to calculate AP for each class (https://stackoverflow.com/questions/56247323/coco-api-evaluation-for-subset-of-classes). Add following code between lines 458-464
+
+    ```python
+    num_classes = 6
+    avg_ap = 0.0
+    if ap == 1:
+        for i in range(0, num_classes):
+            print('category : {0} : {1}'.format(i,np.mean(s[:,:,i,:])))
+            avg_ap +=np.mean(s[:,:,i,:])
+        print('(all categories) mAP : {}'.format(avg_ap / num_classes))
+    ```
+
+## Issues related to COCO API
+
+<details><summary><b>CLICK ME</b> - Issues related to COCO API</summary>
+
+- https://github.com/AlexeyAB/darknet/issues/2140
+- https://github.com/AlexeyAB/darknet/issues/3094
+- https://github.com/AlexeyAB/darknet/issues/7808
+- https://github.com/AlexeyAB/darknet/issues/2145
+- https://github.com/AlexeyAB/darknet/issues/5643
+
+</details>
+
+---
+
 # mAP_eval (In progress)
 
 Goals:
@@ -18,7 +65,7 @@ Refer to demo.ipynb for details
 
 # References
 
-1. [AlexeyAB/darknet](https://github.com/AlexeyAB/darknet) 
+1. [AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
 2. [rafaelpadilla/Object-Detection-Metrics](https://github.com/rafaelpadilla/Object-Detection-Metrics)
 3. [Cartucho/mAP](https://github.com/Cartucho/mAP)
 4. [cocodataset/cocoapi](https://github.com/cocodataset/cocoapi)

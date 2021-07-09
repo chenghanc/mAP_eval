@@ -14,9 +14,10 @@ len(imgIds)
 
 # running evaluation
 cocoEval = COCOeval(cocoGt,cocoDt,annType)
+#cocoEval.params.catIds = [5]                # COCO API evaluation for subset of classes
 cocoEval.params.imgIds = imgIds
 cocoEval.evaluate()
 cocoEval.accumulate()
 cocoEval.summarize()
 
-print(cocoEval.stats)
+#print(cocoEval.stats)
