@@ -17,7 +17,26 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 - Run the code `demo-baby.py` and Yolo Darknet Detection/GT files will be converted to pycocotools json format
 - Run the code `demo-mAP.py`  and mAP will be shown on screen
 
-![alt text](https://github.com/chenghanc/mAP_eval/blob/master/mAP.png?raw=true)
+<details><summary><b>CLICK ME</b> - mAP with COCOAPI</summary>
+
+- mAP with pycocotools (baby)
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.685
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.962
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.821
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.708
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.783
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.380
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.707
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.745
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.626
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.765
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.827
+```
+
+</details>
 
 - We can modify `cocoapi/PythonAPI/pycocotools/cocoeval.py` to calculate AP for each class (https://stackoverflow.com/questions/56247323/coco-api-evaluation-for-subset-of-classes). Add following code between lines 458-464
 
