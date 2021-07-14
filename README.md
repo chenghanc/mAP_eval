@@ -75,7 +75,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.819
 ```
 
-- mAP with pycocotools (car) train
+- mAP with pycocotools (car-v4-tiny) train
   - mAP@[IoU=0.50] with Darknet 95.95 %
 
 ```
@@ -93,8 +93,8 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.875
 ```
 
-- mAP with pycocotools (car) validation
-  - mAP@[IoU=0.50] with Darknet 99.81 %
+- mAP with pycocotools (car-v4-tiny) validation
+  - mAP@[IoU=0.50] with Darknet **99.81 %**
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.625
@@ -109,6 +109,24 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.578
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.695
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.717
+```
+
+- mAP with pycocotools (emotion-v4-tiny) validation
+  - mAP@[IoU=0.50] with Darknet **68.22 %**
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.484
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.683
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.635
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.464
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.479
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.761
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.761
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.761
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.746
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.709
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.770
 ```
 
 </details>
