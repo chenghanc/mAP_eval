@@ -40,7 +40,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 ```
 
 - mAP with pycocotools (baby-v4) validation
-  - mAP@[IoU=0.50] with Darknet 96.64 %
+  - mAP@[IoU=0.50] with Darknet **96.64 %**
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.685
