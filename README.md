@@ -57,24 +57,6 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.827
 ```
 
-- mAP with pycocotools (baby-v4-csp-swish) validation
-  - mAP@[IoU=0.50] with Darknet 96.30 %
-
-```
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.686
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.957
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.820
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.561
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.713
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.771
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.376
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.704
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.743
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.653
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.765
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.819
-```
-
 - mAP with pycocotools (car-v4-tiny) train
   - mAP@[IoU=0.50] with Darknet 95.95 %
 
