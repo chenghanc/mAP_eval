@@ -18,6 +18,7 @@ len(imgIds)
 cocoEval = COCOeval(cocoGt,cocoDt,annType)
 #cocoEval.params.catIds = [5]                # COCO API evaluation for subset of classes
 cocoEval.params.imgIds = imgIds
+#cocoEval.params.maxDets = [1, 100, 1000] # reset maxDets for Baby
 #cocoEval.params.areaRng = [[0 ** 2, 1e5 ** 2], [0 ** 2,155 ** 2], [155** 2,185 ** 2], [185** 2, 1e5 ** 2]] # reset object area for AffectNet
 cocoEval.evaluate()
 cocoEval.accumulate()

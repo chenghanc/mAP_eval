@@ -18,25 +18,27 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 - Run the code `demo-baby.py` and Yolo Darknet Detection/GT files will be converted to pycocotools json format
   - It might be a good idea to rename the file names, e.g. `train1.jpg, train2.jpg, ... train5011.jpg`
 - Run the code `demo-mAP.py`  and mAP will be shown on screen
+  - Reset maxDets if needed
 
 <details><summary><b>CLICK ME</b> - mAP with COCO API</summary>
 
 - mAP with pycocotools (baby-v4) train
-  - mAP@[IoU=0.50] with Darknet 97.61 %
+  - Reset maxDets `cocoEval.params.maxDets = [1, 100, 1000]`
+  - mAP@[IoU=0.50] with Darknet **97.61 %**
 
 ```
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.704
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.963
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.848
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.576
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.738
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.805
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.388
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.709
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.751
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.639
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.787
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.848
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100  ] = 0.704
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.971
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.850
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.580
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.739
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.805
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1  ] = 0.388
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100  ] = 0.751
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.755
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.645
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.788
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.848
 ```
 
 - mAP with pycocotools (baby-v4) validation
@@ -58,7 +60,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 ```
 
 - mAP with pycocotools (car-v4-tiny) train
-  - mAP@[IoU=0.50] with Darknet 95.95 %
+  - mAP@[IoU=0.50] with Darknet **95.95 %**
 
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.753
