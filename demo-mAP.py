@@ -54,16 +54,16 @@ cocoEval.eval['scores'][0, :, 0, 0, 2]
 names=['B', 'Y', 'W', 'R', 'AH', 'BH']
 x = np.arange(0, 1.01, 0.01)
 if 0 < len(names) < 98:
-    print("\n" + "AP@[ IoU=0.50 ]" + " (%)")
-    print("********************")
+    print(" \n" + " AP@[ IoU=0.50 ]" + " (%)")
+    print(" ***********************")
     for i, y in enumerate(all_precision.T):
-        print('c'+f'{i}  : \t {all_precision[:,i].mean() * 100:.2f}')
+        print(' Category :  {0}  : {1:.2f}'.format(i,all_precision[:,i].mean() * 100))
         plt.plot(x, y, linewidth=1, label=f'{names[i]} {all_precision[:,i].mean():.3f}')  # plot(recall, precision)
 else:
     plt.plot(x, all_precision, linewidth=1, color='grey')                                 # plot(recall, precision)
 
-print("-----")
-print("all :\t %.2f" % (all_precision.mean() * 100) + "\n" + "********************" + "\n")
+print(" -----")
+print(" All Categories : %.2f" % (all_precision.mean() * 100) + "\n" + " ***********************" + "\n")
 
 plt.plot(x, all_precision.mean(1), linewidth=3, color='blue', label='all classes %.3f mAP@0.50' % all_precision.mean())
 plt.title('PR Curve: mAP@0.50 =  %.3f' % all_precision.mean())
