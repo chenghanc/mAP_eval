@@ -67,12 +67,12 @@ print(" All Categories : %.2f" % (all_precision.mean() * 100) + "\n" + " *******
 
 print(" \n" + " AP@[ IoU=0.50:0.95 ]" + " (%)")
 print(" ***********************")
-all_precision2 = cocoEval.eval['precision']
+ap = cocoEval.eval['precision']
 num_classes = 6
 avg_ap = 0.0
 for i in range(0, num_classes):
     # 0:all 1:small 2:medium 3:large
-    s = all_precision2[:,:,i,0,2]
+    s = ap[:,:,i,0,2]
     print(' Category :  {0}  : {1:.2f}  -  {2}'.format(i,s.mean() * 100,names[i]))
     avg_ap += s.mean() * 100
 print(" -----")
