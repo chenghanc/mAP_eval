@@ -57,7 +57,7 @@ if 0 < len(names) < 98:
     print(" \n" + " AP@[ IoU=0.50 ]" + " (%)")
     print(" ***********************")
     for i, y in enumerate(all_precision.T):
-        print(' Category :  {0}  : {1:.2f}'.format(i,all_precision[:,i].mean() * 100))
+        print(' Category :  {0}  : {1:.2f}  -  {2}'.format(i,all_precision[:,i].mean() * 100,names[i]))
         plt.plot(x, y, linewidth=1, label=f'{names[i]} {all_precision[:,i].mean():.3f}')  # plot(recall, precision)
 else:
     plt.plot(x, all_precision, linewidth=1, color='grey')                                 # plot(recall, precision)
