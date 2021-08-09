@@ -115,6 +115,97 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 
 </details>
 
+<details><summary><b>V7baby</b> - mAP with COCO API</summary>
+
+- mAP with pycocotools images291
+  - yolov4
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.880
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.994
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.983
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.716
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.883
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.923
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.907
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.908
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.910
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.949
+
+ AP@[ IoU=0.50 ] (%)
+ ***********************
+ Category :  AH  : 98.86
+ Category :  BH  : 100.00
+
+ AP@[ IoU=0.50:0.95 ] (%)
+ ***********************
+ Category :  AH  : 83.22
+ Category :  BH  : 92.80
+```
+
+  - yolov5x
+
+```
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:
+                 all        291        951      0.998      0.998      0.997       0.92
+           AdultHead        291        678      0.999      0.996      0.997      0.888
+        RealBabyHead        291        273      0.998          1      0.996      0.952
+```
+
+- mAP with pycocotools validation
+  - yolov4
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.686
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.963
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.822
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.556
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.709
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.781
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.379
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.745
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.625
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.766
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.827
+
+ AP@[ IoU=0.50 ] (%)
+ ***********************
+ Category :  B   : 97.19
+ Category :  Y   : 94.91
+ Category :  W   : 95.98
+ Category :  R   : 94.06
+ Category :  AH  : 96.48
+ Category :  BH  : 98.92
+
+ AP@[ IoU=0.50:0.95 ] (%)
+ ***********************
+ Category :  B   : 66.65
+ Category :  Y   : 62.23
+ Category :  W   : 64.49
+ Category :  R   : 62.97
+ Category :  AH  : 70.71
+ Category :  BH  : 84.40
+```
+
+  -yolov5x
+
+```
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:
+                 all       3401       7804      0.961      0.924      0.963      0.726
+                blue       3401        559      0.963      0.937      0.971      0.689
+              yellow       3401        813      0.943      0.894      0.944      0.653
+               white       3401        786      0.957       0.91      0.957      0.672
+                 red       3401        749      0.938      0.888      0.942      0.654
+           AdultHead       3401       2349      0.967      0.927      0.967      0.766
+        RealBabyHead       3401       2548      0.997      0.991      0.996      0.918
+```
+
+</details>
+
+
 - We can modify `cocoapi/PythonAPI/pycocotools/cocoeval.py` to calculate AP for each class (https://stackoverflow.com/questions/56247323/coco-api-evaluation-for-subset-of-classes). Add following code between lines 458-464
 
     ```python
