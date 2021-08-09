@@ -115,6 +115,98 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 
 </details>
 
+<details><summary><b>V6baby</b> - mAP with COCO API</summary>
+
+- mAP with pycocotools images291
+  - yolov4
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.855
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.984
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.954
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.649
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.845
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.918
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.885
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.887
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.711
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.881
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.943
+
+ AP@[ IoU=0.50 ] (%)
+ ***********************
+ Category :  AH  : 97.17
+ Category :  BH  : 99.56
+
+ AP@[ IoU=0.50:0.95 ] (%)
+ ***********************
+ Category :  AH  : 80.14
+ Category :  BH  : 90.88
+```
+
+- mAP with pycocotools images291
+  - yolov5x
+
+```
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:
+                 all        291        951      0.991      0.962      0.986      0.866
+           AdultHead        291        678      0.991      0.931      0.977      0.808
+        RealBabyHead        291        273      0.991      0.993      0.996      0.923
+```
+
+- mAP with pycocotools validation
+  - yolov4
+
+```
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.685
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.962
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.821
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.707
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.783
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.380
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.707
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.745
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.626
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.765
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.827
+
+ AP@[ IoU=0.50 ] (%)
+ ***********************
+ Category :  B   : 96.94
+ Category :  Y   : 94.88
+ Category :  W   : 96.33
+ Category :  R   : 93.79
+ Category :  AH  : 96.45
+ Category :  BH  : 98.92
+
+ AP@[ IoU=0.50:0.95 ] (%)
+ ***********************
+ Category :  B   : 66.45
+ Category :  Y   : 62.23
+ Category :  W   : 64.93
+ Category :  R   : 62.45
+ Category :  AH  : 70.47
+ Category :  BH  : 84.64
+```
+
+- mAP with pycocotools validation
+  - yolov5x
+
+```
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:
+                 all       3401       7804      0.961      0.923      0.963      0.725
+                blue       3401        559      0.967      0.938      0.974      0.693
+              yellow       3401        813      0.952      0.902      0.945      0.651
+               white       3401        786      0.956      0.907      0.957      0.672
+                 red       3401        749      0.933      0.878      0.934      0.647
+           AdultHead       3401       2349      0.964      0.923      0.969      0.764
+        RealBabyHead       3401       2548      0.996      0.991      0.996      0.922
+```
+
+</details>
+
 <details><summary><b>V7baby</b> - mAP with COCO API</summary>
 
 - mAP with pycocotools images291
