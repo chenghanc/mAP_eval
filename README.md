@@ -301,8 +301,6 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 
 <details><summary><b>V7baby</b> - Comparison Darknet v.s. tkDNN-TensorRT (FPS)</summary>
 
-**tkDNN-TensorRT** accelerates YOLOv4 ~ **2x** times for batch=1 and ~ **3x-4x** times for batch=4
-
 * Inference FPS of Yolov4 with **Darknet** and **tkDNN-TensorRT** on custom trained model
 * Platform: **GeForce RTX 2080 Ti:**
 * Video Dimensions: 848 x 480
