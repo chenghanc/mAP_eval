@@ -299,6 +299,19 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 
 </details>
 
+<details><summary><b>V7baby</b> - Comparison Darknet v.s. tkDNN-TensorRT (FPS)</summary>
+
+**tkDNN-TensorRT** accelerates YOLOv4 ~ **2x** times for batch=1 and ~ **3x-4x** times for batch=4
+
+* Inference FPS of Yolov4 with **Darknet** and **tkDNN-TensorRT** on custom trained model
+* Platform: **GeForce RTX 2080 Ti:**
+* Video Dimensions: 848 x 480
+
+| Network Size | Darknet AVG_FPS | tkDNN-TensorRT FP32 (B=1) | tkDNN-TensorRT FP32 (B=4) | tkDNN-TensorRT FP16 (B=1) | tkDNN-TensorRT FP16 (B=4) |
+|:------------:|:---------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+| Yolov4 512   |  78.3           | 98.4                      | 123.3                     | 149.5                     | 197.4                     |
+
+</details>
 
 - We can modify `cocoapi/PythonAPI/pycocotools/cocoeval.py` to calculate AP for each class (https://stackoverflow.com/questions/56247323/coco-api-evaluation-for-subset-of-classes). Add following code between lines 458-464
 
