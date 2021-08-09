@@ -145,6 +145,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Category :  BH  : 92.80
 ```
 
+- mAP with pycocotools images291
   - yolov5x
 
 ```
@@ -190,7 +191,8 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
  Category :  BH  : 84.40
 ```
 
-  -yolov5x
+- mAP with pycocotools validation
+  - yolov5x
 
 ```
                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:
