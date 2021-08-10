@@ -247,6 +247,16 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
         RealBabyHead        291        273      0.998          1      0.996      0.952
 ```
 
+- mAP with pycocotools images291
+  - yolov5m (640)
+
+```
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:
+                 all        291        951          1      0.997      0.997       0.92
+           AdultHead        291        678          1      0.994      0.997      0.887
+        RealBabyHead        291        273      0.999          1      0.997      0.953
+```
+
 - mAP with pycocotools validation
   - yolov4
 
@@ -295,6 +305,20 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
                  red       3401        749      0.938      0.888      0.942      0.654
            AdultHead       3401       2349      0.967      0.927      0.967      0.766
         RealBabyHead       3401       2548      0.997      0.991      0.996      0.918
+```
+
+- mAP with pycocotools validation
+  - yolov5m (640)
+
+```
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:
+                 all       3401       7804      0.951      0.936      0.964      0.727
+                blue       3401        559      0.952      0.957      0.973        0.7
+              yellow       3401        813       0.94      0.915      0.949      0.651
+               white       3401        786      0.947      0.917      0.962       0.68
+                 red       3401        749      0.916      0.903      0.937      0.652
+           AdultHead       3401       2349       0.96       0.93      0.969      0.766
+        RealBabyHead       3401       2548      0.994      0.992      0.995      0.912
 ```
 
 </details>
