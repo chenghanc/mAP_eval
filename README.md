@@ -331,7 +331,7 @@ $ grep -vE "(Detection|Enter)" result.txt > result2.txt
 
 | Network Size | Darknet AVG_FPS | tkDNN-TensorRT FP32 (B=1) | tkDNN-TensorRT FP32 (B=4) | tkDNN-TensorRT FP16 (B=1) | tkDNN-TensorRT FP16 (B=4) |
 |:------------:|:---------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
-| Yolov4 512   |  78.3           | 98.4                      | 123.3                     | 149.5                     | 197.4                     |
+| Yolov4 512   |  78.3           | 102.8                     | 124.0                     | 154.2                     | 202.9                     |
 
 </details>
 
