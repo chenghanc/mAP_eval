@@ -35,7 +35,7 @@ def coco_eval(args):
     plt.title('PR Curve: mAP@0.50 =  %.3f' % all_precision.mean())
     plt.ylabel("Precision")
     plt.xlabel("Recall")
-    plt.legend(bbox_to_anchor=(1.04, 1), loc="upper right")
+    plt.legend(loc="best")
     plt.savefig('prcurve.jpg',dpi=250)
     plt.show()
 
