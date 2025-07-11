@@ -1,3 +1,8 @@
+'''
+Usage:
+
+python compute_mAP.py darknet_valid_gt_baby.json darknet_pred_baby.json bbox
+'''
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 import argparse
